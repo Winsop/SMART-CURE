@@ -21,6 +21,7 @@ The project aims to support more consistent curing practices through real-time m
 ## 📑 Table of Contents
 
 - [Overview](#-overview)
+- [Dashboard demo](#dashboard-demo)
 - [Key Features](#-key-features)
 - [System Architecture](#-system-architecture)
 - [Hardware Components](#-hardware-components)
@@ -51,6 +52,16 @@ The system is organized into three primary layers:
 | **Monitoring dashboard** | Presents sensor measurements, system status, diagnostics, and historical trends. |
 
 > **Project scope:** SMART CURE is designed for concrete curing, not agricultural irrigation. Sensor measurements and irrigation decisions must be calibrated and validated for the intended concrete application.
+
+## Dashboard demo
+
+![SMART CURE demo overview with temperature readings, moisture status, and pump status](docs/smart-cure-demo-overview.png)
+
+![SMART CURE showing a simulated disconnected surface probe](docs/smart-cure-demo-probe-fault.png)
+
+These screenshots show the live dashboard interface in **Demo Mode**, using simulated readings and faults. No ESP32, probes, or pump were connected for this trial.
+
+**Software verification:** Type checking, the production build, and 70 test assertions passed. The browser trial exercised a simulated probe disconnect, pump status changes, trends CSV export, and switching between simulated and live modes without a hardware bridge.
 
 ## ✨ Key Features
 
