@@ -152,6 +152,8 @@ SMART-CURE/
 │   ├── IMPLEMENTATION_PLAN.md
 │   ├── PRD.md
 │   └── TECHNICAL_SPEC.md
+├── firmware/
+│   └── SMART_CURE.ino
 ├── server/
 │   └── bridge.js
 ├── src/
@@ -180,7 +182,7 @@ SMART-CURE/
 └── vite.config.ts
 ```
 
-*Note: The current repository structure shown above does not include the ESP32 `.ino` firmware source. Add the firmware directory when the source is available, and update this tree accordingly.*
+The [ESP32 sketch](firmware/SMART_CURE.ino) is included. For a software-only walkthrough, use the dashboard’s Demo mode: its readings are simulated, not measurements from a physical device. Live mode requires an ESP32 and the serial bridge.
 
 ## 🚀 Getting Started
 
@@ -307,15 +309,15 @@ SMART CURE is under active development. The repository contains the web dashboar
 | DSA | Linked list and event-analysis modules |
 | Tests | DSA test suite |
 | Documentation | Requirements, architecture, design, and implementation plans |
-| ESP32 firmware | Not yet present in this repository snapshot |
+| ESP32 firmware | [Sketch included](firmware/SMART_CURE.ino); physical setup and integration require validation |
 | End-to-end hardware validation | Must be confirmed against the current physical setup |
 
 ## 🔭 Future Enhancements
 
 Potential next steps include:
 
-- Integrating and version-controlling the final ESP32 firmware.
-- Completing and documenting the live telemetry transport.
+- Validating the version-controlled ESP32 firmware against the physical setup.
+- Verifying and documenting the live serial telemetry path end to end.
 - Improving sensor calibration and measurement uncertainty reporting.
 - Adding robust sensor-disconnection and pump-fault handling.
 - Expanding historical trend analysis and data export.
